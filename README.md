@@ -18,3 +18,9 @@ npm run start
 http://127.0.0.1:8080/
 控制台会输出生成的信息
 
+## 测试签名
+```angular2html
+npx mocha test/signTransactions.test.js
+
+```
+

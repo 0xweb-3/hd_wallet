@@ -71,6 +71,6 @@ export async function generateMnemonic(bits) {
     return mnemonic;
 }
 
-generateMnemonic(256).then((mnemonic) => {
-    console.log(mnemonic);
-});
+// generateMnemonic(256).then((mnemonic) => {
+//     console.log(mnemonic);
+// });

@@ -6,7 +6,7 @@ const generateMnemonic = require("./mnemonic");
 
 async function makeMnemonic() {
     try {
-        const mnemonic = await generateMnemonic.generateMnemonic(128);
+        const mnemonic = await generateMnemonic.generateMnemonic(256);
         return mnemonic;
     } catch (error) {
         console.error('错误:', error);
@@ -61,14 +61,14 @@ async function generateETHWallet(mnemonic) {
 
 
 // makeMnemonic().then((res)=>{
-//     console.log(res)
+//     console.log("获得的", res)
 // })
-mnemonic = "fabric wagon soup reject then metal unaware forward frog elevator extra floor chase soap drip actress bike verify project physical invest capable goat bachelor"
+
+
+ mnemonic = "relax album real truck weekend client laptop region post idle float expire oil actual basic give cactus ridge fee glove shoulder duty join banana"
 generateHDWalletFromMnemonic(mnemonic).then(() => {});
 console.log("-=======")
 generateETHWallet(mnemonic).then(()=>{})
 
-
-
-// 0x6669A400822afaB7B1DE5b593517011e436c1230
-// 0xf14174ab35973bfa9dea7146c6d5bdbb4505332a
+// ETH 私钥: 0x70bd99ab45b666b1280c003a8852f66d4350219869e97f2fb0306c0e2bdfd057
+// ETH 地址: 0x061ae63923C2553D693BBEFb2084C1995d3B04B3

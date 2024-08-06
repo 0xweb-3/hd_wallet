@@ -1,0 +1,95 @@
+### 获取签名需要的参数 Nonce
+POST https://sepolia.infura.io/v3/xxx
+Content-Type: application/json
+
+{
+  "jsonrpc": "2.0",
+  "method": "eth_getTransactionCount",
+  "params": [
+    "0x061ae63923C2553D693BBEFb2084C1995d3B04B3",
+    "latest"
+  ],
+  "id": 2
+}
+
+### 获取签名需要的参数 Gas
+POST https://sepolia.infura.io/v3/xxx
+Content-Type: application/json
+
+{
+  "jsonrpc": "2.0",
+  "method": "eth_gasPrice",
+  "params": [],
+  "id": 3
+}
+
+### 发送交易到区块链网络
+POST https://sepolia.infura.io/v3/xxx
+Content-Type: application/json
+
+{
+  "jsonrpc":"2.0",
+  "method":"eth_sendRawTransaction",
+  "params":["0x02f87583aa36a70284773594008504a817c800825208948ff44c9b5eab5e5ce8d1d642184b70e9b9587f74872386f26fc1000080c080a06eade5f8e9b0f75932174b8a51f656c346711901e59ad346cf9a7a415100461ca06f9142dfc383126295bfed8b63a23182ba6a1211bc766b0e3e394f030179296f"],
+  "id":1
+}
+
+
+### 检查网络的 RPC 接口是否可以
+POST https://sepolia.infura.io/v3/xxx
+Content-Type: application/json
+
+{
+    "jsonrpc":"2.0",
+    "method":"eth_syncing",
+    "params":[],
+    "id":83
+}
+
+
+### 获取最新块高
+POST https://sepolia.infura.io/v3/xxx
+Content-Type: application/json
+
+{
+  "jsonrpc":"2.0",
+  "method":"eth_blockNumber",
+  "params":[],
+  "id":83
+}
+
+
+### 根据块高获取块里面的信息
+POST https://sepolia.infura.io/v3/xxx
+Content-Type: application/json
+
+{
+  "jsonrpc":"2.0",
+  "method":"eth_getBlockByNumber",
+  "params":["0x625ec8", true],
+  "id":83
+}
+
+
+### 根据交易 Hash 获取交易详情
+POST https://sepolia.infura.io/v3/xxx
+Content-Type: application/json
+
+{
+  "jsonrpc":"2.0",
+  "method":"eth_getTransactionByHash",
+  "params":["0xdde3bec86acdabb6b5b0399903c997aba716204de68f4f345468106ef5b01386"],
+  "id":83
+}
+
+
+### 获取交易状态
+POST https://sepolia.infura.io/v3/xxx
+Content-Type: application/json
+
+{
+  "jsonrpc":"2.0",
+  "method":"eth_getTransactionReceipt",
+  "params":["0xdde3bec86acdabb6b5b0399903c997aba716204de68f4f345468106ef5b01386"],
+  "id":83
+}
