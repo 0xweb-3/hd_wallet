@@ -131,7 +131,7 @@ dist
 
 # ide
 .idea/
-
+package-lock.json
 
 # test
 .http
